@@ -27,4 +27,9 @@ public class StudentService {
 		return student;
 	}
 
+	public Student updateStudent(Student student) {
+		repo.save(student);
+		return student;
+	}
+
 }
