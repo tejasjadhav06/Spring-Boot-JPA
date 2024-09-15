@@ -32,4 +32,11 @@ public class StudentService {
 		return student;
 	}
 
+	public Student deleteStudent(int id) {
+		Student s = getStudentById(id);
+		repo.deleteById(id);
+		return s;
+		
+	}
+
 }
