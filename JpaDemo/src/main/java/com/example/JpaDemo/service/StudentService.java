@@ -21,5 +21,10 @@ public class StudentService {
 	public Student getStudentById(int id) {
 		return repo.findById(id).orElse(new Student());
 	}
+	
+	public Student addStudent(Student student) {
+		repo.save(student);
+		return student;
+	}
 
 }
