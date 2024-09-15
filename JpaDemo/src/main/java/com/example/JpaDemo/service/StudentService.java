@@ -18,4 +18,8 @@ public class StudentService {
 		return repo.findAll();
 	}
 
+	public Student getStudentById(int id) {
+		return repo.findById(id).orElse(new Student());
+	}
+
 }
